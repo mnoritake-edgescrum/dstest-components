@@ -4,8 +4,8 @@
 import figma from "figma"
 
 const instance = figma.selectedInstance
-const appearance = instance.getEnum("Type", { Primary: "filled", Secondary: "plain", Ghost: "tinted" })
-const density = instance.getEnum("Size", { Medium: "compact", Small: "comfortable" })
+const appearance = instance.getEnum("Type", { Primary: "filled", Secondary: "tinted", Ghost: "plain" })
+const density = instance.getEnum("Size", { Medium: "comfortable", Small: "compact" })
 const isInactive = instance.getEnum("Disabled", { True: true, False: false })
 const label = instance.getString("Label")
 
