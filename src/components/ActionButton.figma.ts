@@ -3,10 +3,6 @@
 
 import figma from "figma"
 
-// VERIFICATION ONLY: Type and Size values are intentionally swapped
-// against their visual meaning, to detect whether Figma Make reads Code Connect.
-//   Disabled -> isInactive
-//   Label    -> children
 const instance = figma.selectedInstance
 const appearance = instance.getEnum("Type", { Primary: "filled", Secondary: "plain", Ghost: "tinted" })
 const density = instance.getEnum("Size", { Medium: "compact", Small: "comfortable" })
