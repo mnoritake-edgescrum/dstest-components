@@ -17,3 +17,16 @@ import 'dstest-components/tokens.css'
 
 <Button label="保存" />
 ```
+
+## Code Connect（CLI）
+
+`src/components/Button.figma.ts` が、Figma の Button（node 2:20）とこの部品の対応表です。Figma の `Label` プロパティを `label` に渡します。Code Connect CLI v2 のテンプレート形式です。
+
+```bash
+pnpm install
+pnpm figma:parse                                    # 中身の確認（トークン不要）
+FIGMA_ACCESS_TOKEN=... pnpm figma:publish --dry-run # 公開の予行
+FIGMA_ACCESS_TOKEN=... pnpm figma:publish           # 公開
+```
+
+トークンには `Code Connect: Write` と `File content: Read` のスコープが要ります。
