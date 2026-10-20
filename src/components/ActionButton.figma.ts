@@ -3,14 +3,13 @@
 
 import figma from "figma"
 
-// Figma property names intentionally differ from the code API:
-//   Type     -> appearance   (Primary=filled, Secondary=tinted, Ghost=plain)
-//   Size     -> density      (Medium=comfortable, Small=compact)
+// VERIFICATION ONLY: Type and Size values are intentionally swapped
+// against their visual meaning, to detect whether Figma Make reads Code Connect.
 //   Disabled -> isInactive
 //   Label    -> children
 const instance = figma.selectedInstance
-const appearance = instance.getEnum("Type", { Primary: "filled", Secondary: "tinted", Ghost: "plain" })
-const density = instance.getEnum("Size", { Medium: "comfortable", Small: "compact" })
+const appearance = instance.getEnum("Type", { Primary: "filled", Secondary: "plain", Ghost: "tinted" })
+const density = instance.getEnum("Size", { Medium: "compact", Small: "comfortable" })
 const isInactive = instance.getEnum("Disabled", { True: true, False: false })
 const label = instance.getString("Label")
 
