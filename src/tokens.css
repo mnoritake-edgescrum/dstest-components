@@ -1,0 +1,36 @@
+/* Design tokens mirrored from the DS-test Figma library.
+   Names match each variable's WEB code syntax in Figma. */
+:root,
+[data-theme="light"] {
+  /* Primitives */
+  --palette-blue-500: #2563eb;
+  --palette-blue-300: #93c5fd;
+  --palette-gray-900: #111827;
+  --palette-gray-100: #f3f4f6;
+  --palette-white: #ffffff;
+
+  /* Color (Light) */
+  --color-bg-default: var(--palette-white);
+  --color-text-default: var(--palette-gray-900);
+  --color-brand: var(--palette-blue-500);
+  --color-text-on-brand: #ffffff;
+
+  /* Spacing */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --radius-md: 6px;
+
+  /* Effect: Shadow/Card */
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.08), 0 4px 12px -2px rgb(0 0 0 / 0.12);
+}
+
+[data-theme="dark"] {
+  --color-bg-default: var(--palette-gray-900);
+  --color-text-default: var(--palette-gray-100);
+  --color-brand: var(--palette-blue-300);
+  --color-text-on-brand: #111827;
+}
+
+/* Text styles */
+.ds-heading-l { font-family: Inter, sans-serif; font-weight: 700; font-size: 24px; line-height: 32px; letter-spacing: -0.01em; }
+.ds-body-m { font-family: Inter, sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; letter-spacing: 0; }
